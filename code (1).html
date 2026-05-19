@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.5);
+        }
+        .active-ring:focus-within {
+            box-shadow: 0 0 0 2px #ff7a00;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1b1c1c",
+                        "inverse-primary": "#ffb68b",
+                        "on-tertiary-container": "#373737",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#303031",
+                        "inverse-on-surface": "#f2f0f0",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#994700",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-variant": "#e3e2e2",
+                        "primary-fixed": "#ffdbc8",
+                        "on-error": "#ffffff",
+                        "background": "#fbf9f9",
+                        "on-surface-variant": "#584235",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-secondary-container": "#67645d",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#494640",
+                        "primary": "#994700",
+                        "secondary-fixed": "#e7e2d9",
+                        "secondary-fixed-dim": "#cbc6bd",
+                        "surface-container-low": "#f5f3f3",
+                        "primary-fixed-dim": "#ffb68b",
+                        "on-surface": "#1b1c1c",
+                        "tertiary": "#5f5e5e",
+                        "secondary": "#615e57",
+                        "surface-container-highest": "#e3e2e2",
+                        "surface-container": "#efeded",
+                        "on-primary-fixed": "#321200",
+                        "on-primary-container": "#5c2800",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#e0c0af",
+                        "on-secondary-fixed": "#1d1b16",
+                        "surface-dim": "#dbdad9",
+                        "tertiary-container": "#a2a0a0",
+                        "surface-container-high": "#e9e8e7",
+                        "secondary-container": "#e7e2d9",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#8c7263",
+                        "primary-container": "#ff7a00",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fbf9f9",
+                        "on-primary-fixed-variant": "#753400",
+                        "surface-bright": "#fbf9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "16px",
+                        "stack-md": "12px",
+                        "section-gap": "48px",
+                        "container-margin": "24px",
+                        "stack-sm": "4px",
+                        "stack-lg": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "title-md": ["Inter", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/20 shadow-sm flex items-center justify-between px-container-margin py-stack-md">
+<div class="flex items-center gap-4">
+<button aria-label="Go back" class="p-2 hover:bg-surface-container rounded-full transition-colors active:scale-90">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">Payment</h1>
+</div>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="text-label-caps font-label-caps uppercase tracking-wider">Secure</span>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-container-margin pt-24 space-y-gutter">
+<!-- Order Summary Card -->
+<section class="glass-card rounded-xl p-stack-lg shadow-[0px_4px_20px_rgba(26,26,26,0.05)] border-l-4 border-primary">
+<div class="flex justify-between items-center">
+<div>
+<h2 class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-1">Order Summary</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Tiffin Delivery • 3 Items</p>
+</div>
+<div class="text-right">
+<p class="font-headline-lg-mobile text-headline-lg-mobile text-primary">₹1800</p>
+<button class="text-primary text-label-caps font-label-caps hover:underline">View Details</button>
+</div>
+</div>
+</section>
+<!-- Payment Methods Section -->
+<div class="space-y-stack-lg">
+<!-- UPI Section -->
+<section class="space-y-stack-md">
+<h3 class="font-label-caps text-label-caps text-secondary px-1 uppercase tracking-widest">UPI Payments</h3>
+<div class="glass-card rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(26,26,26,0.05)]">
+<!-- GPay -->
+<label class="flex items-center justify-between p-stack-lg hover:bg-primary-fixed/20 cursor-pointer transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-sm">
+<img alt="GPay" class="w-6" data-alt="Official Google Pay logo featuring multi-colored geometric shapes on a clean white background, representative of modern digital payment technologies used in premium food delivery apps." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2AHCqzBESFjnv-NidoNhf0abb8WIAR3vdcZlX13UWsg4uaTfxZGXLpaQvXA4V90oRarMYS3B4Kwem7eEbdBpDoJeZlOlFtpdo4juo6YZyOHHdS20vpFeEmauveMLjXMeEyNnqfmIjdJKS_1kh7c5_plkybDj1x23mzAtx7LmIBOWPNDn7iwrBQlBiddMma539ZH-DISkxLsA51qmfEntm678sFtKYCnuJ6-qGGxVWA2eekag7DJsX4k-vYFDSNT5WaoIumOSiMKvU"/>
+</div>
+<span class="font-title-md text-title-md">Google Pay</span>
+</div>
+<input class="w-6 h-6 text-primary border-outline focus:ring-primary" name="payment" type="radio"/>
+</label>
+<div class="h-[1px] bg-outline-variant/30 mx-stack-lg"></div>
+<!-- PhonePe -->
+<label class="flex items-center justify-between p-stack-lg hover:bg-primary-fixed/20 cursor-pointer transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-sm">
+<img alt="PhonePe" class="w-6" data-alt="Official PhonePe logo with vibrant purple and white branding, displayed prominently in a minimalist card layout for a high-end bistro mobile interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtwrHR0w7x0R2rCidOE5-e3TmbcGresfOoQCO-Nyv-iQUAfhPB-4SNGCuyFWLx7WN6Aq06pMNFtNpQEVb-5hHWqcfXZ5_I35QgKueOYp6dv8XKxBjf2hjk-EPPlsgGILSzCtf0DvStFk153t4thZQrTyeLaAA94Jhz5Xcvr6fL1wYHNs7DiRrD-HfqzEXC01z8E2ZBlvbiNHQ0qk51YEqaT4y7x5ogcANtfZYycNvnBIPfnyehCvSUItplNmer0PkdLx_bl8bpohWc"/>
+</div>
+<span class="font-title-md text-title-md">PhonePe</span>
+</div>
+<input class="w-6 h-6 text-primary border-outline focus:ring-primary" name="payment" type="radio"/>
+</label>
+<div class="h-[1px] bg-outline-variant/30 mx-stack-lg"></div>
+<!-- UPI ID Input -->
+<div class="p-stack-lg">
+<div class="relative active-ring rounded-lg overflow-hidden border border-outline bg-white transition-shadow">
+<input class="w-full px-4 py-3 border-none focus:ring-0 font-body-lg text-body-lg" placeholder="Enter UPI ID (e.g. user@bank)" type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-1.5 bg-primary/10 text-primary font-label-caps text-label-caps rounded-lg hover:bg-primary/20 transition-colors">Verify</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Cards Section -->
+<section class="space-y-stack-md">
+<h3 class="font-label-caps text-label-caps text-secondary px-1 uppercase tracking-widest">Credit &amp; Debit Cards</h3>
+<div class="glass-card rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(26,26,26,0.05)]">
+<label class="flex items-center justify-between p-stack-lg hover:bg-primary-fixed/20 cursor-pointer transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-inverse-surface flex items-center justify-center shadow-sm text-white">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<div>
+<p class="font-title-md text-title-md">HDFC Bank Card</p>
+<p class="font-body-sm text-body-sm text-secondary">Ends in 4242</p>
+</div>
+</div>
+<input checked="" class="w-6 h-6 text-primary border-outline focus:ring-primary" name="payment" type="radio"/>
+</label>
+<div class="h-[1px] bg-outline-variant/30 mx-stack-lg"></div>
+<button class="w-full flex items-center gap-4 p-stack-lg hover:bg-primary-fixed/20 transition-colors">
+<div class="w-10 h-10 rounded-lg border-2 border-dashed border-outline-variant flex items-center justify-center text-outline">
+<span class="material-symbols-outlined">add</span>
+</div>
+<span class="font-title-md text-title-md text-primary">Add New Card</span>
+</button>
+</div>
+</section>
+<!-- Others Section -->
+<section class="space-y-stack-md">
+<h3 class="font-label-caps text-label-caps text-secondary px-1 uppercase tracking-widest">Other Options</h3>
+<div class="glass-card rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(26,26,26,0.05)]">
+<label class="flex items-center justify-between p-stack-lg hover:bg-primary-fixed/20 cursor-pointer transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">account_balance</span>
+<span class="font-title-md text-title-md">Net Banking</span>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</label>
+<div class="h-[1px] bg-outline-variant/30 mx-stack-lg"></div>
+<label class="flex items-center justify-between p-stack-lg hover:bg-primary-fixed/20 cursor-pointer transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">payments</span>
+<span class="font-title-md text-title-md">Cash on Delivery</span>
+</div>
+<input class="w-6 h-6 text-primary border-outline focus:ring-primary" name="payment" type="radio"/>
+</label>
+</div>
+</section>
+<!-- Security Badges -->
+<div class="flex justify-center items-center gap-gutter py-8 opacity-60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider">Secure SSL</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">handshake</span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider">Trusted Payments</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">payment_card</span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider">PCI Compliant</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Payment Button -->
+<footer class="fixed bottom-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-t border-white/20 px-container-margin py-stack-lg">
+<div class="max-w-[1280px] mx-auto">
+<button class="w-full bg-primary text-white py-4 rounded-xl flex items-center justify-center gap-3 font-bold text-title-md shadow-lg active:scale-[0.98] transition-transform group relative overflow-hidden" id="pay-button">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lock</span>
+                Pay ₹1800
+                <div class="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12"></div>
+</button>
+</div>
+</footer>
+<script>
+        // Micro-interaction for the payment button
+        document.getElementById('pay-button').addEventListener('click', function() {
+            const btn = this;
+            const originalContent = btn.innerHTML;
+            
+            btn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Processing...
+            `;
+            btn.classList.add('opacity-80', 'pointer-events-none');
+            
+            setTimeout(() => {
+                btn.innerHTML = `<span class="material-symbols-outlined">check_circle</span> Success!`;
+                btn.classList.replace('bg-primary', 'bg-green-600');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.classList.replace('bg-green-600', 'bg-primary');
+                    btn.classList.remove('opacity-80', 'pointer-events-none');
+                }, 2000);
+            }, 1500);
+        });
+
+        // Toggle radio selection on parent click
+        document.querySelectorAll('label').forEach(label => {
+            label.addEventListener('click', () => {
+                const radio = label.querySelector('input[type="radio"]');
+                if (radio) radio.checked = true;
+            });
+        });
+    </script>
+</body></html>

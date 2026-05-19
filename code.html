@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TiffinKota - Premium Tiffin Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "inverse-primary": "#ffb68b",
+                      "surface-dim": "#dbdad9",
+                      "inverse-on-surface": "#f2f0f0",
+                      "outline-variant": "#e0c0af",
+                      "background": "#fbf9f9",
+                      "surface-container-lowest": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#ffb68b",
+                      "on-secondary-container": "#67645d",
+                      "secondary-fixed-dim": "#cbc6bd",
+                      "secondary-container": "#e7e2d9",
+                      "on-tertiary-container": "#373737",
+                      "primary-container": "#ff7a00",
+                      "on-surface": "#1b1c1c",
+                      "surface": "#fbf9f9",
+                      "primary-fixed": "#ffdbc8",
+                      "secondary-fixed": "#e7e2d9",
+                      "surface-container-low": "#f5f3f3",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "tertiary": "#5f5e5e",
+                      "surface-variant": "#e3e2e2",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed-variant": "#494640",
+                      "surface-container-high": "#e9e8e7",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-container": "#5c2800",
+                      "primary": "#994700",
+                      "on-error-container": "#93000a",
+                      "surface-container-highest": "#e3e2e2",
+                      "surface-container": "#efeded",
+                      "on-secondary": "#ffffff",
+                      "surface-bright": "#fbf9f9",
+                      "outline": "#8c7263",
+                      "secondary": "#615e57",
+                      "on-background": "#1b1c1c",
+                      "tertiary-container": "#a2a0a0",
+                      "on-primary-fixed-variant": "#753400",
+                      "on-primary-fixed": "#321200",
+                      "tertiary-fixed": "#e5e2e1",
+                      "inverse-surface": "#303031",
+                      "on-secondary-fixed": "#1d1b16",
+                      "on-surface-variant": "#584235",
+                      "on-error": "#ffffff",
+                      "surface-tint": "#994700",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "48px",
+                      "stack-lg": "24px",
+                      "gutter": "16px",
+                      "stack-sm": "4px",
+                      "container-margin": "24px",
+                      "stack-md": "12px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "body-sm": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "title-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "display-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-lg selection:bg-primary-fixed-dim">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 border-b border-white/20 backdrop-blur-xl bg-white/80 dark:bg-black/80 shadow-sm">
+<div class="flex items-center justify-between px-container-margin py-stack-md w-full max-w-[1280px] mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary">DELIVERING TO</span>
+<span class="font-title-md text-title-md md:font-headline-lg md:text-headline-lg text-primary">Talwandi, Kota</span>
+</div>
+</div>
+<div class="flex items-center gap-stack-lg">
+<button class="material-symbols-outlined text-primary text-2xl hover:opacity-80 transition-opacity active:scale-95 duration-150" data-icon="search">search</button>
+<div class="hidden md:block">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">TiffinKota</span>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-[90px] pb-24 max-w-[1280px] mx-auto px-container-margin">
+<!-- Hero Section -->
+<section class="mt-stack-lg mb-section-gap">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg mb-stack-md">Fresh Tiffins, <br class="md:hidden"/>Every Day</h1>
+<!-- Filter Chips -->
+<div class="flex items-center gap-3 overflow-x-auto hide-scrollbar py-2">
+<button class="flex-none px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-caps text-label-caps shadow-sm active:scale-95 transition-transform">Veg</button>
+<button class="flex-none px-4 py-2 rounded-full bg-surface-container-high text-on-surface font-label-caps text-label-caps border border-outline-variant hover:bg-surface-variant active:scale-95 transition-transform">Non-Veg</button>
+<button class="flex-none px-4 py-2 rounded-full bg-surface-container-high text-on-surface font-label-caps text-label-caps border border-outline-variant hover:bg-surface-variant active:scale-95 transition-transform">Top Rated</button>
+<button class="flex-none px-4 py-2 rounded-full bg-surface-container-high text-on-surface font-label-caps text-label-caps border border-outline-variant hover:bg-surface-variant active:scale-95 transition-transform">Under ₹2000/mo</button>
+</div>
+</section>
+<!-- Tiffin Services Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-stack-lg">
+<!-- Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(26,26,26,0.05)] transition-all duration-300 hover:shadow-[0px_12px_32px_rgba(26,26,26,0.12)]">
+<div class="relative h-48 w-full overflow-hidden">
+<img alt="Mom's Kitchen Interior" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A professional and brightly lit bistro-style kitchen interior, capturing the essence of 'Mom's Kitchen'. The scene features warm overhead lighting reflecting off clean stainless steel surfaces and wooden accents. Soft daylight filters through a window, illuminating fresh ingredients on the counter. The overall atmosphere is premium, clean, and appetizing, aligned with a modern-tactile aesthetic of a high-end food service startup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkabtnJRqWqschDh4LSN2dclF5LZqcaZps_0L4aGVTlGslwYXbxhTrgZOaXuxmcxlnsC8_NrGuN-IXClbNkVobaZ2rseFgzoSQ4FVDKSy_s3MHs0XYzgmbgTSm3OZpoKcYlndp0w-OQ4W1-1KKCP3kTeBtC40nA2FpuAe2PksAFzw09eawl3RG7D8wq_bc5xV6evzXep4y9PIHN_R_doYeVYfGUBAk0oYxLi0z8kt0TyPIfCKS527Lff6AONen2HKa10zmpi3NNxAU"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-caps text-label-caps text-on-surface">4.8</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 relative">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Mom's Kitchen</h3>
+<p class="font-body-sm text-body-sm text-secondary">Today: <span class="text-on-surface-variant italic">Paneer Butter Masala + Roti</span></p>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md text-primary">₹1800</span>
+<span class="font-label-caps text-label-caps block text-secondary">per month</span>
+</div>
+</div>
+<button class="absolute -top-6 right-4 bg-primary-container text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(26,26,26,0.05)] transition-all duration-300 hover:shadow-[0px_12px_32px_rgba(26,26,26,0.12)]">
+<div class="relative h-48 w-full overflow-hidden">
+<img alt="Healthy Bites Tiffin" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A high-angle studio shot of a premium stainless steel tiffin box set against a minimalist cream-colored background. The tiffin is partially open to reveal vibrant, healthy Indian dishes like dal and vegetable curry. Professional culinary lighting creates soft, elegant shadows, emphasizing a clean and gourmet food experience. The image evokes quality, care, and a sophisticated concierge-like food delivery service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzynTtUIcPLPYOej5V5p5J2ozsZd034x6yZT5DWLReLksKSj36oGqoUheyw6CXbbahM0_T7qoaxwkVD0oyg5YIFs7KNqsmBYMlyXrHiWlKUN-FZiFl-LaU4lLORP1OAp4T1_bWNq_5gI7ZxdEa53MJIeAIkvChdo_yI7YCfJkntotR2BuACL_HyNxM7wbU-Gh9JhLhH2c_r1Toyxm3_oKHgUAjkF0UoALLdVQc9SMPQVHqCfim4gukwEtuKrLS_cIC6e5Kqko7HF8q"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-caps text-label-caps text-on-surface">4.6</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 relative">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Healthy Bites</h3>
+<p class="font-body-sm text-body-sm text-secondary">Today: <span class="text-on-surface-variant italic">Dal Makhani + Rice</span></p>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md text-primary">₹2200</span>
+<span class="font-label-caps text-label-caps block text-secondary">per month</span>
+</div>
+</div>
+<button class="absolute -top-6 right-4 bg-primary-container text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(26,26,26,0.05)] transition-all duration-300 hover:shadow-[0px_12px_32px_rgba(26,26,26,0.12)]">
+<div class="relative h-48 w-full overflow-hidden">
+<img alt="Annapurna Tiffin" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A warm and inviting culinary close-up of traditional Indian lunch preparations in a high-end, contemporary kitchen setting. Steam rises gracefully from a copper serving dish, with soft-focus kitchen utensils in the background. The lighting is golden and appetizing, highlighting the rich textures of the food. The overall aesthetic is professional yet cozy, promising a trustworthy and flavorful home-cooked meal experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqUMLDC2OneTwa2e59Av4QbWvN5xV0iFZdlGpGbpzAj8PVavkYrHNFKqQ2zQzxKqRX4AXkm0HIGSXBX3YH20tOlEmilfPe_q7ZV1_Z9qE9Wmh7wlhrEAGZTYRrAjNTfM0Tq6rZRMNAC5RcsvK2Rpn9iF_QhCzzbW_UqLeFHCLgF_4DK9BPOabW3H27CMCVtkNkgWT-NRymKMEWE-6YpVOT8FgF0kwYPyrsvk7pypdJ0Lh3tSnajsIVPXdDkRoIwjl4Kmig4C7svaU7"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-caps text-label-caps text-on-surface">4.9</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 relative">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Annapurna Tiffins</h3>
+<p class="font-body-sm text-body-sm text-secondary">Today: <span class="text-on-surface-variant italic">Mixed Veg + Missi Roti</span></p>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md text-primary">₹1950</span>
+<span class="font-label-caps text-label-caps block text-secondary">per month</span>
+</div>
+</div>
+<button class="absolute -top-6 right-4 bg-primary-container text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Card 4 (Bento Style/Featured) -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(26,26,26,0.05)] transition-all duration-300 hover:shadow-[0px_12px_32px_rgba(26,26,26,0.12)] lg:col-span-2 flex flex-col md:flex-row">
+<div class="relative h-48 md:h-full md:w-1/2 overflow-hidden">
+<img alt="Grand Rasoi Featured" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A wide, cinematic shot of a modern food assembly line for a high-end tiffin service. Chefs in clean, professional white uniforms are carefully arranging meals into premium eco-friendly containers. The environment is clinical yet warm, with bright high-key lighting and a palette of whites and soft oranges. The image communicates efficiency, hygiene, and a boutique culinary operation at scale." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7tCQmk6VzVzDmJNbME_GNALSXEFiPGn1MH-B0HeL0I4SKyfPAQzSu6isa3uCttlOP4xUKAdieXY2UE1tbv7IAP4QWhD1wwBfjmw0NyDvbj8iStnFjLpnPIv970-Tk4W9BspH8ortDA2-H259_oUka7OMg37SwsShQl-RSKSuntXgjey4g_UHyDIz1q_JChofGbo0bcgyZmK8orC2Q_oWQRuIOz0rzLZCq7zTOPcly4O_FodM_y_dHz7QvODvOyZYBtdzwVtA44aNr"/>
+<div class="absolute top-3 left-3 bg-primary-container text-white px-3 py-1 rounded-lg shadow-md font-label-caps text-label-caps">
+                        BEST VALUE
+                    </div>
+</div>
+<div class="p-6 md:w-1/2 flex flex-col justify-center gap-4 relative">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-primary font-label-caps text-label-caps">VERIFIED PARTNER</span>
+</div>
+<h3 class="font-display-lg text-[28px] leading-tight text-on-surface">The Grand Rasoi</h3>
+<p class="font-body-lg text-body-lg text-secondary mt-2">Elite meal plans starting from just ₹60/day. Authentic flavors from Rajasthan.</p>
+</div>
+<div class="flex items-end justify-between mt-auto">
+<div class="text-left">
+<span class="font-headline-lg text-headline-lg text-primary">₹1650</span>
+<span class="font-label-caps text-label-caps block text-secondary">per month</span>
+</div>
+<button class="bg-primary text-white px-6 py-3 rounded-full font-bold text-sm shadow-md hover:opacity-90 active:scale-95 transition-all">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(26,26,26,0.05)] transition-all duration-300 hover:shadow-[0px_12px_32px_rgba(26,26,26,0.12)]">
+<div class="relative h-48 w-full overflow-hidden">
+<img alt="Ghar Ki Rasoi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A close-up shot of hand-rolled rotis being stacked next to a small bowl of fragrant yellow dal. The scene is lit with natural, warm afternoon sunlight, creating a nostalgic yet high-end 'home-cooked' feeling. The background is a clean white marble surface, reinforcing the premium-bistro brand aesthetic. The focus is sharp on the texture of the grain, suggesting purity and health." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_Mty_Hp63WQeO8r4xXvRx0BdOD19zKH2DWoOfEj0unDinVEoj_h2e2exer20-H1hoTxpJfk1R8j0OxvpqGK1z6BZJyThEUZabSss-pCMhovgUm68_ukNYSTu67bIS_djv84025WsxSnBQggyHmN-1JqV7rrJc9DjN_N7X4RjX_E1fNnvg9WtO5LI6V7BDZuhUCaiitTUHpDmgae6X9-3CHJ87SaGDkIXgmwf2vAcAg366dj4dtkRweI2DSKSuGfS8q8JVj3mrYyk0"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-caps text-label-caps text-on-surface">4.7</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 relative">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Ghar Ki Rasoi</h3>
+<p class="font-body-sm text-body-sm text-secondary">Today: <span class="text-on-surface-variant italic">Aloo Matar + Curd</span></p>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md text-primary">₹1700</span>
+<span class="font-label-caps text-label-caps block text-secondary">per month</span>
+</div>
+</div>
+<button class="absolute -top-6 right-4 bg-primary-container text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe glass-nav bg-surface/80 dark:bg-black/80 shadow-[0px_-4px_20px_rgba(26,26,26,0.05)] rounded-t-xl border-t border-white/20">
+<button class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-caps text-label-caps mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary opacity-40 hover:opacity-100 transition-all active:scale-98">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-label-caps text-label-caps mt-1">Orders</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary opacity-40 hover:opacity-100 transition-all active:scale-98">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-label-caps text-label-caps mt-1">Wallet</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary opacity-40 hover:opacity-100 transition-all active:scale-98">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-caps text-label-caps mt-1">Profile</span>
+</button>
+</nav>
+<script>
+        // Micro-interactions for chips
+        const chips = document.querySelectorAll('.flex-none.rounded-full');
+        chips.forEach(chip => {
+            chip.addEventListener('click', function() {
+                chips.forEach(c => {
+                    c.classList.remove('bg-primary-container', 'text-on-primary-container');
+                    c.classList.add('bg-surface-container-high', 'text-on-surface');
+                });
+                this.classList.remove('bg-surface-container-high', 'text-on-surface');
+                this.classList.add('bg-primary-container', 'text-on-primary-container');
+            });
+        });
+
+        // Simple scroll reveal effect for cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.group.relative').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

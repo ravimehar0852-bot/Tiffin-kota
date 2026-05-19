@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TiffinKota | Premium Bistro Tiffin Service</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.5);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #ffdbc8 0%, #fbf9f9 60%);
+        }
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .animate-pulse-soft {
+            animation: pulse-soft 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "inverse-primary": "#ffb68b",
+                        "surface-dim": "#dbdad9",
+                        "inverse-on-surface": "#f2f0f0",
+                        "outline-variant": "#e0c0af",
+                        "background": "#fbf9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb68b",
+                        "on-secondary-container": "#67645d",
+                        "secondary-fixed-dim": "#cbc6bd",
+                        "secondary-container": "#e7e2d9",
+                        "on-tertiary-container": "#373737",
+                        "primary-container": "#ff7a00",
+                        "on-surface": "#1b1c1c",
+                        "surface": "#fbf9f9",
+                        "primary-fixed": "#ffdbc8",
+                        "secondary-fixed": "#e7e2d9",
+                        "surface-container-low": "#f5f3f3",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "tertiary": "#5f5e5e",
+                        "surface-variant": "#e3e2e2",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#494640",
+                        "surface-container-high": "#e9e8e7",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#5c2800",
+                        "primary": "#994700",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e3e2e2",
+                        "surface-container": "#efeded",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fbf9f9",
+                        "outline": "#8c7263",
+                        "secondary": "#615e57",
+                        "on-background": "#1b1c1c",
+                        "tertiary-container": "#a2a0a0",
+                        "on-primary-fixed-variant": "#753400",
+                        "on-primary-fixed": "#321200",
+                        "tertiary-fixed": "#e5e2e1",
+                        "inverse-surface": "#303031",
+                        "on-secondary-fixed": "#1d1b16",
+                        "on-surface-variant": "#584235",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#994700",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "48px",
+                        "stack-lg": "24px",
+                        "gutter": "16px",
+                        "stack-sm": "4px",
+                        "container-margin": "24px",
+                        "stack-md": "12px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-lg overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 border-b border-white/20 backdrop-blur-xl bg-white/80 dark:bg-black/80 shadow-sm">
+<nav class="flex items-center justify-between px-container-margin py-stack-md w-full max-w-[1280px] mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="location_on">location_on</span>
+<span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed">TiffinKota</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold transition-opacity hover:opacity-80" href="#">Home</a>
+<a class="text-secondary-fixed-dim transition-opacity hover:opacity-80" href="#">Kitchens</a>
+<a class="text-secondary-fixed-dim transition-opacity hover:opacity-80" href="#">Plans</a>
+<a class="text-secondary-fixed-dim transition-opacity hover:opacity-80" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity" data-icon="search">search</button>
+<button class="hidden md:flex items-center gap-2 bg-primary text-white px-6 py-2 rounded-full font-bold transition-transform active:scale-95">
+<span class="text-label-caps font-label-caps">LOGIN</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="hero-gradient relative overflow-hidden px-container-margin py-section-gap">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-stack-lg min-h-[618px]">
+<div class="z-10 order-2 md:order-1">
+<span class="inline-block px-4 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-caps text-label-caps mb-4">
+                        KOTA'S #1 MEAL NETWORK
+                    </span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-stack-md leading-tight">
+                        Premium Tiffin <br class="hidden md:block"/> Services in Kota
+                    </h1>
+<p class="text-body-lg text-secondary mb-10 max-w-lg">
+                        Savor the warmth of home-cooked meals prepared by elite local kitchens. Curated nutrition, delivered daily to your doorstep.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-body-lg shadow-lg transition-all hover:translate-y-[-2px] active:scale-98">
+                            Order Tiffin
+                        </button>
+<button class="bg-white border-2 border-primary-fixed text-primary px-8 py-4 rounded-xl font-bold text-body-lg transition-all hover:bg-primary-fixed/20 active:scale-98">
+                            Register Your Service
+                        </button>
+</div>
+</div>
+<div class="relative order-1 md:order-2 h-[400px] md:h-[600px]">
+<div class="absolute inset-0 bg-primary-container/10 rounded-[40px] rotate-3 -z-10"></div>
+<img alt="Premium Bistro Food" class="w-full h-full object-cover rounded-[40px] shadow-2xl transition-transform duration-700 hover:scale-[1.02]" data-alt="A high-end, top-down culinary photograph of a modern tiffin meal set against a pristine, textured white ceramic background. The meal features vibrant organic vegetables, perfectly steamed grains, and a rich, aromatic curry in elegant small bowls. Warm, soft morning sunlight streams in from the side, creating long gentle shadows that emphasize the fresh textures of the food. The overall aesthetic is professional, appetizing, and premium, reflecting a high-end culinary brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAoLDRyP5N1jvvlnS8aHWYfViuvBKGa9nRXPxj2aT2w_CU9aqFS3mXYJkD5p7K7xRnClmC_qeT9lRmJJY61pgYWhcf4Z7NIY5HmVOwltjmfYy701BhoxlANSm5gsOOzOQmHLNeYOQtD4oVyk6pEZAnqnAR93LDBOobtaRTPhKoUvVjhT_QDj8g8-EtQkHAAkSeeUReMSpu8MN30YwHDP1UMUu8qkXmGkPx4LqeC5IQtBNB6YKMHcYYPsYsZjwWchGyWh4m9MCXcms7"/>
+<!-- Floating Stat Cards -->
+<div class="absolute top-10 -left-10 glass-card p-4 rounded-2xl shadow-lg hidden lg:block animate-bounce-slow">
+<div class="flex items-center gap-3">
+<div class="bg-green-100 text-green-700 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">5000+</p>
+<p class="text-[10px] uppercase tracking-wider text-secondary">Active Users</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular Kitchens Section -->
+<section class="max-w-[1280px] mx-auto px-container-margin py-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Popular Kitchens</h2>
+<p class="text-secondary">Handpicked culinary masters in Kota</p>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold group">
+                    View all Kitchens
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Bento-style Kitchen Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Kitchen Card 1 -->
+<div class="glass-card rounded-3xl overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-56 relative">
+<img alt="Kitchen Image" class="w-full h-full object-cover" data-alt="A clean, professionally lit kitchen environment featuring stainless steel surfaces and a warm wooden countertop. A chef is artfully plating a fresh, healthy Indian meal into a tiered stainless steel tiffin container. Soft, natural lighting highlights the steam rising from the hot food, creating an inviting and trustworthy atmosphere. The image is captured with a shallow depth of field, focusing on the quality of ingredients and the hygiene of the process." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiJibmX4_PMbuf1W1uh-DwClqGRQ5bvrEsIbCisr3I7WKTtkgKLdq4d78g3VEMFOuILI3RLeEP7muDmkpoLMCDdF-VFW6FFeRo4BTvbXTYeR_9jVC_ZV0Uqur1fw7FmXJfsTBgU7At1QFrf1BB8WSapjD5OzVy0oeK_hvaByaKaNljK8F27Vr5LIMDYkIyyx5Sp2Kfl_CxL3xTE05Gj8j1D7TU0HcckYMFhnvNz_PfLDLAFIZ_Uix0KXrlN-B1RUBQgp_xk3k5lV73"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-500 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.8</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Annapurna Rasoi</h3>
+<p class="text-body-sm text-secondary">Pure Vegetarian • Talwandi</p>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-lg text-label-caps font-label-caps">TOP RATED</span>
+</div>
+<div class="flex items-center justify-between mt-6">
+<div>
+<p class="text-label-caps text-secondary uppercase">MONTHLY PLAN</p>
+<p class="text-primary font-bold text-title-md">₹2,800</p>
+</div>
+<button class="w-12 h-12 bg-primary-container text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform active:scale-95 shadow-md">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Kitchen Card 2 -->
+<div class="glass-card rounded-3xl overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-56 relative">
+<img alt="Kitchen Image" class="w-full h-full object-cover" data-alt="A macro photograph of vibrant, healthy food ingredients arranged in a modern kitchen setting. Deep orange spices, lush green herbs, and golden grains are showcased under bright, warm lighting. The focus is sharp on the fresh textures, suggesting premium quality and professional culinary care. The overall aesthetic is clean, warm, and appetizing with a sophisticated modern vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgJeCrvJtSosqezosGY_wAhRYlc6jbCMwBOHOdBMfqaXpAT1Sp4fBcsRX2g7HM15kPnE51khTCceoMqcU9VwQU_ZwVfDAuZgbH1XwCVL7DQMiNpYmPh3tUcHwST4NR1GPa7qeDfXqsVKWkbk7MqDDytKxzVUZC2Gtvm8y70QmYv-o76sga-N5ZljV72PoyIqU7gQuPsX0qGomrjI2M9K6CujNQPqraCFcu3XM10JagFxZvjR_unrsRbyP1ltpNoHKOqd7GinC1tkKB"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-500 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.6</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">The Bistro Box</h3>
+<p class="text-body-sm text-secondary">Gourmet Meals • Landmark City</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6">
+<div>
+<p class="text-label-caps text-secondary uppercase">MONTHLY PLAN</p>
+<p class="text-primary font-bold text-title-md">₹3,500</p>
+</div>
+<button class="w-12 h-12 bg-primary-container text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform active:scale-95 shadow-md">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Kitchen Card 3 -->
+<div class="glass-card rounded-3xl overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-56 relative">
+<img alt="Kitchen Image" class="w-full h-full object-cover" data-alt="An overhead view of a beautifully arranged salad and healthy meal prep bowls. Each bowl contains a variety of colorful vegetables like roasted sweet potatoes, fresh greens, and quinoa. The lighting is crisp and airy, evoking a sense of health and vitality. The surface is a light-colored marble, adding to the premium bistro feel. The composition is clean, balanced, and visually stimulating." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN0KEPlbIxLmCjJIF0aw3IsCr6p_7fFGvdHHdBmUfZqaF_xGUxsVfN61eoDkZWWMd-HC08tE8zB86hM0XuIXvfMmWQKoXBAcoRiuJpGfajDSCsQNUZkWVLwKryPLQo-cz-I5HSfFGtbPDM9vDBZp1eDUVGT-ElZ9DoRh57vHCIJNg9iqyp4GQwNI-BcXywlRYKlpxOsCN08ATIL7btQHA6BqMdzvlZHoon5Fjdbi6h072CjCGajAgDC8dBv41-5H3DvzTpjVPkhacZ"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-500 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.9</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Healthy Bites</h3>
+<p class="text-body-sm text-secondary">Diet Specific • Kunadi</p>
+</div>
+<span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-label-caps font-label-caps">FASTEST</span>
+</div>
+<div class="flex items-center justify-between mt-6">
+<div>
+<p class="text-label-caps text-secondary uppercase">MONTHLY PLAN</p>
+<p class="text-primary font-bold text-title-md">₹3,200</p>
+</div>
+<button class="w-12 h-12 bg-primary-container text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform active:scale-95 shadow-md">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works Section -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-[1280px] mx-auto px-container-margin">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">How It Works</h2>
+<p class="text-secondary max-w-xl mx-auto">Get fresh, warm meals in three simple steps. We take care of the cooking and delivery while you focus on your goals.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-primary-fixed flex items-center justify-center mb-6 shadow-inner">
+<span class="material-symbols-outlined text-[40px] text-primary" data-icon="calendar_month">calendar_month</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-3">Select Plan</h3>
+<p class="text-body-sm text-secondary leading-relaxed">Choose from various meal plans tailored to your preference: Veg, Non-Veg, or Health-Focused diets.</p>
+</div>
+<div class="flex flex-col items-center text-center relative">
+<div class="hidden md:block absolute top-12 -right-1/4 w-1/2 border-t-2 border-dashed border-outline-variant"></div>
+<div class="w-24 h-24 rounded-full bg-primary-fixed flex items-center justify-center mb-6 shadow-inner">
+<span class="material-symbols-outlined text-[40px] text-primary" data-icon="delivery_dining">delivery_dining</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-3">Daily Delivery</h3>
+<p class="text-body-sm text-secondary leading-relaxed">Our partners deliver fresh, warm meals to your hostel, office, or residence at a fixed time every day.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-primary-fixed flex items-center justify-center mb-6 shadow-inner">
+<span class="material-symbols-outlined text-[40px] text-primary" data-icon="favorite">favorite</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-3">Healthy Meals</h3>
+<p class="text-body-sm text-secondary leading-relaxed">Enjoy nutritious, balanced home-style food that keeps you energetic and focused throughout the day.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Tracking Section Mockup -->
+<section class="max-w-[1280px] mx-auto px-container-margin py-section-gap">
+<div class="glass-card rounded-[40px] p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 bg-primary-container text-white">
+<div class="flex-1">
+<h2 class="font-headline-lg text-headline-lg mb-4">Track Your Tiffin in Real-Time</h2>
+<p class="opacity-90 mb-8 text-body-lg">Never wonder where your meal is. Our advanced logistics keep you updated from the kitchen to your table.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
+<span class="font-bold">Active Delivery</span>
+</div>
+<div class="w-full bg-white/20 h-3 rounded-full overflow-hidden">
+<div class="bg-white h-full w-2/3 rounded-full relative">
+<span class="absolute right-0 -top-1 w-5 h-5 bg-white border-4 border-primary rounded-full"></span>
+</div>
+</div>
+<div class="flex justify-between text-label-caps font-label-caps opacity-80">
+<span>KITCHEN</span>
+<span>IN-TRANSIT</span>
+<span>ARRIVED</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/3">
+<div class="bg-white rounded-3xl p-6 text-on-surface shadow-2xl">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Delivery Partner" class="w-full h-full object-cover" data-alt="A portrait of a friendly, professional delivery person wearing a clean, modern uniform with a smile. The lighting is bright and outdoor-focused, suggesting reliability and transparency. The background is slightly blurred, focusing all attention on the persona of the trustworthy service provider." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHzwcLDaAvcXpW6Eck55M77D7KbH8HOOGa5piS6Hdkj_66nKFA6XQMzdhEj20PsbH7BZe9M3sncTx6y2JupnnYUsR8SpGXY07CP8lScHz1gNYGC-T2Qs3hveRinlM-7V3ybNCnroJhZ1l8pU2piNrzCyKT3H5kiQb_cWODIDJ8aqX2aEjETXP4Pf1KjfH8HBWNJ8xDT0kvrWoQIbJvhgSVHEFETU6oycBjY9__-Pa-qqE9ZDhoqM2dukYiKZmB_LOTIccHpBn__N1C"/>
+</div>
+<div>
+<p class="font-bold">Rahul Sharma</p>
+<p class="text-xs text-secondary">Your Delivery Hero</p>
+</div>
+<button class="ml-auto w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</button>
+</div>
+<div class="border-t border-surface-variant pt-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="schedule">schedule</span>
+<span class="text-sm font-bold">Estimated Arrival: 1:15 PM</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface text-inverse-on-surface pt-section-gap pb-32 md:pb-12">
+<div class="max-w-[1280px] mx-auto px-container-margin grid grid-cols-1 md:grid-cols-4 gap-stack-lg">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary-fixed text-[32px]" data-icon="location_on">location_on</span>
+<span class="font-headline-lg text-headline-lg font-bold text-white">TiffinKota</span>
+</div>
+<p class="text-secondary-fixed-dim text-body-sm mb-6 leading-relaxed">
+                    Bringing the authentic taste of homemade meals to the hard-working students and professionals of Kota. Premium, Healthy, and Always on Time.
+                </p>
+</div>
+<div>
+<h4 class="font-bold mb-6">For Users</h4>
+<ul class="space-y-4 text-secondary-fixed-dim text-body-sm">
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Order Tiffin</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Pricing Plans</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Student Discounts</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Meal Customizer</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">For Partners</h4>
+<ul class="space-y-4 text-secondary-fixed-dim text-body-sm">
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Register Kitchen</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Delivery Fleet</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Partner Dashboard</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Quality Standards</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Connect</h4>
+<div class="flex gap-4 mb-6">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary-fixed/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary-fixed/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
+</a>
+</div>
+<p class="text-secondary-fixed-dim text-body-sm">Talwandi, Kota, Rajasthan, 324005</p>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-container-margin mt-12 pt-8 border-t border-white/10 text-center text-secondary-fixed-dim text-xs">
+            © 2024 TiffinKota Services Pvt. Ltd. All rights reserved.
+        </div>
+</footer>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface/80 dark:bg-black/80 backdrop-blur-xl rounded-t-xl border-t border-white/20 shadow-lg">
+<div class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-caps text-label-caps">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-secondary opacity-40 hover:opacity-100 transition-all">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-label-caps text-label-caps">Orders</span>
+</div>
+<div class="flex flex-col items-center justify-center text-secondary opacity-40 hover:opacity-100 transition-all">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-label-caps text-label-caps">Wallet</span>
+</div>
+<div class="flex flex-col items-center justify-center text-secondary opacity-40 hover:opacity-100 transition-all">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-caps text-label-caps">Profile</span>
+</div>
+</nav>
+<script>
+        // Subtle interaction for kitchen cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Floating elements animation trigger
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                header.classList.remove('shadow-md');
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+            }
+        });
+    </script>
+</body></html>

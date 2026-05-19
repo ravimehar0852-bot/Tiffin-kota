@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="U.S.K GROUP – Trusted Property, Construction, Finance & Business Consultancy Services in Kota, Rajasthan. Building Dreams, Creating Realities." />
+  <meta name="keywords" content="property kota, construction rajasthan, loan finance kota, business consultancy, insurance, digital marketing, USK Group" />
+  <meta property="og:title" content="U.S.K GROUP | Building Dreams, Creating Realities" />
+  <meta property="og:description" content="Premium Property, Construction & Business Consultancy in Kota Rajasthan." />
+  <title>U.S.K GROUP | Building Dreams, Creating Realities</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Rajdhani:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- ══════════════════════ LOADER ══════════════════════ -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">
+      <span class="loader-u">U</span><span class="loader-dot">.</span><span class="loader-s">S</span><span class="loader-dot">.</span><span class="loader-k">K</span>
+    </div>
+    <div class="loader-tagline">GROUP</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <div class="loader-text">Crafting Excellence...</div>
+  </div>
+</div>
+
+<!-- ══════════════════════ ENQUIRY POPUP ══════════════════════ -->
+<div id="enquiry-popup" class="popup-overlay">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()"><i class="fas fa-times"></i></button>
+    <div class="popup-badge">FREE CONSULTATION</div>
+    <h3>Get Expert Advice Today</h3>
+    <p>Speak with our consultants about property, loans, construction or any business need.</p>
+    <form class="popup-form" onsubmit="handlePopupSubmit(event)">
+      <input type="text" placeholder="Your Full Name" required />
+      <input type="tel" placeholder="Phone / WhatsApp Number" required />
+      <select>
+        <option value="">Select Service</option>
+        <option>Property Purchase / Sale</option>
+        <option>Construction</option>
+        <option>Loan & Finance</option>
+        <option>Insurance</option>
+        <option>Business Consultancy</option>
+        <option>Job Consultancy</option>
+        <option>Digital Marketing</option>
+      </select>
+      <button type="submit" class="btn-gold">Book Free Consultation</button>
+    </form>
+  </div>
+</div>
+
+<!-- ══════════════════════ SCROLLING TICKER ══════════════════════ -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>✦ Trusted by Hundreds of Clients Across Rajasthan</span>
+    <span>✦ Property Purchase & Sale Experts</span>
+    <span>✦ Modern Construction Solutions</span>
+    <span>✦ Loan & Finance Assistance</span>
+    <span>✦ Business & Job Consultancy</span>
+    <span>✦ Digital Marketing Excellence</span>
+    <span>✦ Trusted by Hundreds of Clients Across Rajasthan</span>
+    <span>✦ Property Purchase & Sale Experts</span>
+    <span>✦ Modern Construction Solutions</span>
+    <span>✦ Loan & Finance Assistance</span>
+    <span>✦ Business & Job Consultancy</span>
+    <span>✦ Digital Marketing Excellence</span>
+  </div>
+</div>
+
+<!-- ══════════════════════ NAVBAR ══════════════════════ -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <div class="logo-mark">
+        <span>U</span><span class="dot">.</span><span>S</span><span class="dot">.</span><span>K</span>
+      </div>
+      <div class="logo-sub">GROUP</div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="tel:8000556793" class="nav-cta">Call Now</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════ HERO SECTION ══════════════════════ -->
+<section id="home" class="hero">
+  <div class="hero-video-wrap">
+    <div class="hero-overlay"></div>
+    <!-- Video placeholder – replace src with actual video -->
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4"/>
+    </video>
+    <div class="hero-bg-fallback"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge reveal">✦ Kota Rajasthan's Premier Group ✦</div>
+    <h1 class="hero-title reveal">
+      Building Dreams,<br/><em>Creating Realities</em>
+    </h1>
+    <p class="hero-sub reveal">
+      Trusted Property, Construction &amp; Business Consultancy Services<br/>
+      <strong>in Kota, Rajasthan</strong>
+    </p>
+    <div class="hero-btns reveal">
+      <a href="tel:8000556793" class="btn-gold"><i class="fas fa-phone-alt"></i> Call Now</a>
+      <a href="#contact" class="btn-outline" onclick="openPopup()"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+      <a href="#projects" class="btn-ghost"><i class="fas fa-images"></i> View Projects</a>
+    </div>
+    <div class="hero-stats reveal">
+      <div class="hstat"><span class="hnum" data-target="500">0</span><span>+</span><p>Happy Clients</p></div>
+      <div class="hstat-divider"></div>
+      <div class="hstat"><span class="hnum" data-target="200">0</span><span>+</span><p>Projects Done</p></div>
+      <div class="hstat-divider"></div>
+      <div class="hstat"><span class="hnum" data-target="8">0</span><span>+</span><p>Services</p></div>
+      <div class="hstat-divider"></div>
+      <div class="hstat"><span class="hnum" data-target="10">0</span><span>+</span><p>Years Experience</p></div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span>Scroll Down</span>
+  </div>
+</section>
+
+<!-- ══════════════════════ FEATURES STRIP ══════════════════════ -->
+<section class="features-strip">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feat-card reveal-up" style="--d:0s">
+        <div class="feat-icon"><i class="fas fa-building"></i></div>
+        <h4>Property Purchase & Sale</h4>
+        <p>Premium land, plots & residential deals</p>
+      </div>
+      <div class="feat-card reveal-up" style="--d:.1s">
+        <div class="feat-icon"><i class="fas fa-hard-hat"></i></div>
+        <h4>Modern Construction</h4>
+        <p>Luxury builds & architectural excellence</p>
+      </div>
+      <div class="feat-card reveal-up" style="--d:.2s">
+        <div class="feat-icon"><i class="fas fa-hand-holding-usd"></i></div>
+        <h4>Loan Assistance</h4>
+        <p>Home, business & personal loan guidance</p>
+      </div>
+      <div class="feat-card reveal-up" style="--d:.3s">
+        <div class="feat-icon"><i class="fas fa-shield-alt"></i></div>
+        <h4>Insurance Solutions</h4>
+        <p>Life, health & property insurance</p>
+      </div>
+      <div class="feat-card reveal-up" style="--d:.4s">
+        <div class="feat-icon"><i class="fas fa-briefcase"></i></div>
+        <h4>Business Consultancy</h4>
+        <p>Strategy, growth & business planning</p>
+      </div>
+      <div class="feat-card reveal-up" style="--d:.5s">
+        <div class="feat-icon"><i class="fas fa-bullhorn"></i></div>
+        <h4>Digital Marketing</h4>
+        <p>Social media, SEO & brand growth</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ ABOUT SECTION ══════════════════════ -->
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal-left">
+        <div class="about-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Luxury Property" class="about-img-main" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?w=400&q=80" alt="Construction" class="about-img-float" loading="lazy"/>
+          <div class="about-badge-float">
+            <span class="abf-num">10+</span>
+            <span class="abf-text">Years of Trust</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-text reveal-right">
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title">Rajasthan's Most <em>Trusted</em> Business Group</h2>
+        <p class="about-lead">U.S.K GROUP is a multi-vertical powerhouse headquartered in Borkheda, Kota — delivering excellence across property, construction, finance, insurance, and consultancy.</p>
+        <p class="about-body">Founded with a vision to transform lives through trusted services, we have helped hundreds of families find their dream homes, entrepreneurs build their ventures, and businesses grow digitally. Our team combines local expertise with global standards.</p>
+        <div class="about-pillars">
+          <div class="pillar"><i class="fas fa-check-circle"></i><span>Transparent Dealings</span></div>
+          <div class="pillar"><i class="fas fa-check-circle"></i><span>Expert Professionals</span></div>
+          <div class="pillar"><i class="fas fa-check-circle"></i><span>End-to-End Support</span></div>
+          <div class="pillar"><i class="fas fa-check-circle"></i><span>Client-First Approach</span></div>
+        </div>
+        <a href="#contact" class="btn-gold" onclick="openPopup()">Talk to an Expert</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ STATS COUNTER ══════════════════════ -->
+<section class="stats-section">
+  <div class="stats-bg"></div>
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal-up" style="--d:0s">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-num counter" data-target="500">0</div><span>+</span>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-item reveal-up" style="--d:.15s">
+        <div class="stat-icon"><i class="fas fa-home"></i></div>
+        <div class="stat-num counter" data-target="150">0</div><span>+</span>
+        <div class="stat-label">Properties Sold</div>
+      </div>
+      <div class="stat-item reveal-up" style="--d:.3s">
+        <div class="stat-icon"><i class="fas fa-tools"></i></div>
+        <div class="stat-num counter" data-target="80">0</div><span>+</span>
+        <div class="stat-label">Projects Built</div>
+      </div>
+      <div class="stat-item reveal-up" style="--d:.45s">
+        <div class="stat-icon"><i class="fas fa-rupee-sign"></i></div>
+        <div class="stat-num counter" data-target="50">0</div><span>Cr+</span>
+        <div class="stat-label">Loans Facilitated</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ SERVICES SECTION ══════════════════════ -->
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">What We Offer</div>
+      <h2 class="section-title">Our Premium <em>Services</em></h2>
+      <p class="section-sub">Eight powerful verticals under one trusted roof — all designed for your growth.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal-up" style="--d:0s">
+        <div class="sc-number">01</div>
+        <div class="sc-icon"><i class="fas fa-building"></i></div>
+        <h3>Property Purchase & Sale</h3>
+        <p>Residential plots, commercial properties, and investment land — curated across Kota & Rajasthan with complete legal support.</p>
+        <div class="sc-hover-line"></div>
+      </div>
+      <div class="service-card reveal-up" style="--d:.1s">
+        <div class="sc-number">02</div>
+        <div class="sc-icon"><i class="fas fa-hard-hat"></i></div>
+        <h3>Construction & Builders</h3>
+        <p>From foundation to finish — luxury residential and commercial construction with premium materials and master craftsmanship.</p>
+        <div class="sc-hover-line"></div>
+      </div>
+      <div class="service-card reveal-up" style="--d:.2s">
+        <div class="sc-number">03</div>
+        <div class="sc-icon"><i class="fas fa-piggy-bank"></i></div>
+        <h3>Loans & Finance</h3>
+        <p>Home loans, business loans, personal finance — we connect you with the best lenders and simplify the entire process.</p>
+        <div class="sc-hover-line"></div>
+      </div>
+      <div class="service-card reveal-up" style="--d:.3s">
+        <div class="sc-number">04</div>
+        <div class="sc-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Insurance</h3>
+        <p>Life, health, motor, property insurance — comprehensive coverage solutions for families, businesses and assets.</p>
+        <div class="sc-hover-line"></div>
+      </div>
+      <div class="service-card reveal-up" style="--d:.4s">
+        <div class="sc-number">05</div>
+        <div class="sc-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Business Consultancy</h3>
+        <p>Strategic business planning, startup guidance, GST, legal compliance and growth roadmaps for entrepreneurs.</p>
+        <div class="sc-hover-line"></div>
+      </div>
+      <div class="service-card reveal-up" style="--d:.5s">
+        <div class="sc-number">06</div>
+        <div class="sc-icon"><i class="fas fa-user-tie"></i></div>
+        <h3>Job Consultancy</h3>
+        <p>Placement assistance, career counselling, resume building, and employer-candidate matching across sectors.</p>
+        <div class="sc-hover-line"></div>
+      </div>
+      <div class="service-card reveal-up" style="--d:.6s">
+        <div class="sc-number">07</div>
+        <div class="sc-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Digital Marketing</h3>
+        <p>Social media management, SEO, Meta & Google Ads, content creation and brand building for modern businesses.</p>
+        <div class="sc-hover-line"></div>
+      </div>
+      <div class="service-card reveal-up" style="--d:.7s">
+        <div class="sc-number">08</div>
+        <div class="sc-icon"><i class="fas fa-handshake"></i></div>
+        <h3>Sales & Marketing</h3>
+        <p>Sales funnel creation, B2B/B2C marketing, lead generation and conversion optimization strategies.</p>
+        <div class="sc-hover-line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ PROJECTS / GALLERY ══════════════════════ -->
+<section id="projects" class="projects-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-title">Signature <em>Projects</em></h2>
+      <p class="section-sub">A curated showcase of our finest property, construction and consultancy achievements.</p>
+    </div>
+    <div class="project-filters reveal">
+      <button class="pf-btn active" data-filter="all">All</button>
+      <button class="pf-btn" data-filter="property">Property</button>
+      <button class="pf-btn" data-filter="construction">Construction</button>
+      <button class="pf-btn" data-filter="interior">Interior</button>
+    </div>
+    <div class="masonry-grid">
+      <div class="masonry-item tall reveal-up" data-cat="construction" style="--d:0s">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80" alt="Luxury Building" loading="lazy"/>
+        <div class="mi-overlay">
+          <div class="mi-tag">Construction</div>
+          <h4>Royal Heights Tower</h4>
+          <p>Kota, Rajasthan</p>
+          <span class="mi-icon"><i class="fas fa-expand-alt"></i></span>
+        </div>
+      </div>
+      <div class="masonry-item reveal-up" data-cat="property" style="--d:.1s">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80" alt="Luxury Villa" loading="lazy"/>
+        <div class="mi-overlay">
+          <div class="mi-tag">Property</div>
+          <h4>Premium Villa Project</h4>
+          <p>Borkheda, Kota</p>
+          <span class="mi-icon"><i class="fas fa-expand-alt"></i></span>
+        </div>
+      </div>
+      <div class="masonry-item reveal-up" data-cat="interior" style="--d:.2s">
+        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=700&q=80" alt="Interior" loading="lazy"/>
+        <div class="mi-overlay">
+          <div class="mi-tag">Interior</div>
+          <h4>Luxury Interior Suite</h4>
+          <p>Kota City</p>
+          <span class="mi-icon"><i class="fas fa-expand-alt"></i></span>
+        </div>
+      </div>
+      <div class="masonry-item reveal-up" data-cat="property" style="--d:.3s">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80" alt="Modern Home" loading="lazy"/>
+        <div class="mi-overlay">
+          <div class="mi-tag">Property</div>
+          <h4>Modern Residence</h4>
+          <p>Rajasthan</p>
+          <span class="mi-icon"><i class="fas fa-expand-alt"></i></span>
+        </div>
+      </div>
+      <div class="masonry-item tall reveal-up" data-cat="construction" style="--d:.4s">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80" alt="Construction Site" loading="lazy"/>
+        <div class="mi-overlay">
+          <div class="mi-tag">Construction</div>
+          <h4>Commercial Complex</h4>
+          <p>Kota</p>
+          <span class="mi-icon"><i class="fas fa-expand-alt"></i></span>
+        </div>
+      </div>
+      <div class="masonry-item reveal-up" data-cat="interior" style="--d:.5s">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=700&q=80" alt="Luxury Interior" loading="lazy"/>
+        <div class="mi-overlay">
+          <div class="mi-tag">Interior</div>
+          <h4>Executive Office Design</h4>
+          <p>Kota</p>
+          <span class="mi-icon"><i class="fas fa-expand-alt"></i></span>
+        </div>
+      </div>
+    </div>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+      <div class="lightbox-inner">
+        <img id="lightbox-img" src="" alt=""/>
+        <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ YOUTUBE VIDEO SECTION ══════════════════════ -->
+<section class="video-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Watch & Learn</div>
+      <h2 class="section-title">See Our <em>Work in Action</em></h2>
+    </div>
+    <div class="video-wrap reveal">
+      <div class="video-frame-gold">
+        <iframe
+          src="https://www.youtube.com/embed/videoseries?list=PLdXGDTo7YoRs5oNL8K_S5J9qnJJMdwnPx"
+          title="USK Group YouTube"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="yt-cta">
+        <p>Explore our full portfolio of projects on YouTube</p>
+        <a href="https://youtube.com/@uskgroup" target="_blank" rel="noopener" class="btn-gold"><i class="fab fa-youtube"></i> Visit Our Channel</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FAQ ══════════════════════ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item reveal-up" style="--d:0s">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How can I buy a property through U.S.K GROUP?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">Simply contact us via phone or WhatsApp at 8000556793. Our property experts will understand your requirements and shortlist the best options across Kota and Rajasthan within your budget.</div>
+      </div>
+      <div class="faq-item reveal-up" style="--d:.1s">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What types of loans do you assist with?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">We assist with home loans, business loans, personal loans, lap (loan against property), and education loans. We work with 20+ banks and NBFCs to get you the best rates.</div>
+      </div>
+      <div class="faq-item reveal-up" style="--d:.2s">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Do you offer construction services for residential projects?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">Yes! We handle complete residential construction from design and planning to interior finishing. We use quality materials and employ experienced engineers and contractors.</div>
+      </div>
+      <div class="faq-item reveal-up" style="--d:.3s">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Is business consultancy only for large companies?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">Not at all. We serve startups, MSMEs, and growing businesses alike. Whether you need GST registration, business planning, or growth strategy — we're here for every stage.</div>
+      </div>
+      <div class="faq-item reveal-up" style="--d:.4s">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How can digital marketing help my business?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">We run targeted campaigns on Meta (Facebook/Instagram), Google, and YouTube. Our content team creates engaging posts, reels, and ads that bring real customers — not just followers.</div>
+      </div>
+      <div class="faq-item reveal-up" style="--d:.5s">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Where is U.S.K GROUP located?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">Our main office is at Borkheda, Kota, Rajasthan. You can walk in, or reach us via call/WhatsApp at 8000556793. We serve clients across entire Rajasthan.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ TESTIMONIALS ══════════════════════ -->
+<section id="testimonials" class="testimonials-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Client Love</div>
+      <h2 class="section-title">What Our Clients <em>Say</em></h2>
+      <p class="section-sub">Real stories from real people who trusted U.S.K GROUP.</p>
+    </div>
+    <div class="testi-carousel reveal">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"U.S.K GROUP helped us buy our dream home in Kota within budget. The team was transparent, professional and incredibly supportive throughout the entire process."</p>
+          <div class="testi-author">
+            <div class="ta-avatar"><i class="fas fa-user"></i></div>
+            <div>
+              <strong>Ramesh Sharma</strong>
+              <span>Property Client, Kota</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Got my business loan approved within 10 days thanks to USK GROUP. Their finance team knows exactly which banks to approach and how to get things done fast."</p>
+          <div class="testi-author">
+            <div class="ta-avatar"><i class="fas fa-user"></i></div>
+            <div>
+              <strong>Priya Verma</strong>
+              <span>Business Owner, Rajasthan</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Our house construction was handled end-to-end by U.S.K GROUP. Quality materials, on-time delivery, and they stayed within budget. Highly recommended!"</p>
+          <div class="testi-author">
+            <div class="ta-avatar"><i class="fas fa-user"></i></div>
+            <div>
+              <strong>Suresh Meena</strong>
+              <span>Construction Client, Kota</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Their digital marketing team transformed my restaurant business. Instagram followers grew 10x and we started getting daily inquiries from Google. Excellent work!"</p>
+          <div class="testi-author">
+            <div class="ta-avatar"><i class="fas fa-user"></i></div>
+            <div>
+              <strong>Anjali Gupta</strong>
+              <span>Restaurant Owner, Kota</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"The job consultancy team at USK GROUP placed me in a great company within 3 weeks. They polished my resume and prepared me well for interviews. Life-changing!"</p>
+          <div class="testi-author">
+            <div class="ta-avatar"><i class="fas fa-user"></i></div>
+            <div>
+              <strong>Vikram Singh</strong>
+              <span>Job Seeker, Rajasthan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-controls">
+        <button class="tc-btn" onclick="moveCarousel(-1)"><i class="fas fa-chevron-left"></i></button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="tc-btn" onclick="moveCarousel(1)"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ PARTNERS STRIP ══════════════════════ -->
+<section class="partners-section">
+  <div class="container">
+    <div class="section-label reveal" style="text-align:center;margin-bottom:2rem;">Trusted Partners</div>
+    <div class="partners-scroll">
+      <div class="partners-track">
+        <div class="partner-logo"><i class="fas fa-university"></i><span>SBI Bank</span></div>
+        <div class="partner-logo"><i class="fas fa-building"></i><span>HDFC</span></div>
+        <div class="partner-logo"><i class="fas fa-landmark"></i><span>LIC India</span></div>
+        <div class="partner-logo"><i class="fas fa-shield-alt"></i><span>ICICI Prudential</span></div>
+        <div class="partner-logo"><i class="fas fa-chart-pie"></i><span>Bajaj Finance</span></div>
+        <div class="partner-logo"><i class="fas fa-handshake"></i><span>PNB Housing</span></div>
+        <div class="partner-logo"><i class="fas fa-university"></i><span>SBI Bank</span></div>
+        <div class="partner-logo"><i class="fas fa-building"></i><span>HDFC</span></div>
+        <div class="partner-logo"><i class="fas fa-landmark"></i><span>LIC India</span></div>
+        <div class="partner-logo"><i class="fas fa-shield-alt"></i><span>ICICI Prudential</span></div>
+        <div class="partner-logo"><i class="fas fa-chart-pie"></i><span>Bajaj Finance</span></div>
+        <div class="partner-logo"><i class="fas fa-handshake"></i><span>PNB Housing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ CONTACT SECTION ══════════════════════ -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Let's Build Your <em>Future</em></h2>
+      <p class="section-sub">Reach out for any query — property, loan, construction, or consultancy. We respond within hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <div class="ci-item">
+          <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <strong>Office Location</strong>
+            <p>Borkheda, Kota, Rajasthan</p>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+          <div>
+            <strong>Phone / WhatsApp</strong>
+            <p><a href="tel:8000556793">8000556793</a></p>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><i class="fab fa-instagram"></i></div>
+          <div>
+            <strong>Instagram</strong>
+            <p><a href="https://instagram.com/u.s.k.group786" target="_blank">@u.s.k.group786</a></p>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><i class="fab fa-youtube"></i></div>
+          <div>
+            <strong>YouTube</strong>
+            <p><a href="https://youtube.com/@uskgroup" target="_blank">youtube.com/@uskgroup</a></p>
+          </div>
+        </div>
+        <!-- Google Map Embed -->
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.1!2d75.8648!3d25.1818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f5c0b7c74b4a1%3A0x1!2sBorkheda%2C+Kota%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1234567890"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="USK Group Location">
+          </iframe>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal-right">
+        <form class="contact-form" onsubmit="handleFormSubmit(event)">
+          <h3>Send an Enquiry</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Your Name" required/>
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" placeholder="8000556793" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="your@email.com"/>
+          </div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select>
+              <option value="">Select a Service</option>
+              <option>Property Purchase / Sale</option>
+              <option>Construction</option>
+              <option>Loan & Finance</option>
+              <option>Insurance</option>
+              <option>Business Consultancy</option>
+              <option>Job Consultancy</option>
+              <option>Digital Marketing</option>
+              <option>Sales & Marketing</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="4" placeholder="Tell us about your requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn-gold btn-full">
+            <i class="fas fa-paper-plane"></i> Send Enquiry
+          </button>
+          <p class="form-note"><i class="fas fa-lock"></i> Your info is 100% safe. We never share data.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="fl-u">U</span><span class="fl-dot">.</span><span class="fl-s">S</span><span class="fl-dot">.</span><span class="fl-k">K</span>
+            <span class="fl-grp">GROUP</span>
+          </div>
+          <p>Building dreams and creating realities across Rajasthan. Trusted for property, construction, finance, and business excellence.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/u.s.k.group786" target="_blank" class="fs-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@uskgroup" target="_blank" class="fs-icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/918000556793" target="_blank" class="fs-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:8000556793" class="fs-icon"><i class="fas fa-phone-alt"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home"><i class="fas fa-chevron-right"></i>Home</a></li>
+            <li><a href="#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i>Services</a></li>
+            <li><a href="#projects"><i class="fas fa-chevron-right"></i>Projects</a></li>
+            <li><a href="#testimonials"><i class="fas fa-chevron-right"></i>Testimonials</a></li>
+            <li><a href="#contact"><i class="fas fa-chevron-right"></i>Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i>Property Purchase & Sale</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i>Construction & Builders</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i>Loans & Finance</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i>Insurance</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i>Business Consultancy</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i>Digital Marketing</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-col">
+          <h4>Contact Info</h4>
+          <div class="fc-item"><i class="fas fa-map-marker-alt"></i><span>Borkheda, Kota, Rajasthan</span></div>
+          <div class="fc-item"><i class="fas fa-phone-alt"></i><a href="tel:8000556793">8000556793</a></div>
+          <div class="fc-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/918000556793">WhatsApp Us</a></div>
+          <div class="fc-item"><i class="fab fa-instagram"></i><a href="https://instagram.com/u.s.k.group786" target="_blank">@u.s.k.group786</a></div>
+          <div class="fc-item"><i class="fab fa-youtube"></i><a href="https://youtube.com/@uskgroup" target="_blank">@uskgroup</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="fc-copy">
+        <span class="gold">✦</span> &copy; 2025 <strong>U.S.K GROUP</strong> — All Rights Reserved. Designed with <span class="gold">♥</span> for excellence.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════ FLOATING BUTTONS ══════════════════════ -->
+<a href="https://wa.me/918000556793" class="float-btn float-wa" target="_blank" title="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="fb-tooltip">Chat on WhatsApp</span>
+</a>
+<a href="tel:8000556793" class="float-btn float-call" title="Call">
+  <i class="fas fa-phone-alt"></i>
+  <span class="fb-tooltip">Call Now</span>
+</a>
+
+<!-- ══════════════════════ SUCCESS TOAST ══════════════════════ -->
+<div id="toast" class="toast">
+  <i class="fas fa-check-circle"></i>
+  <span id="toast-msg">Enquiry sent! We'll call you shortly.</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

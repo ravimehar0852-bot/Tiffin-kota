@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | TiffinKota</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "inverse-primary": "#ffb68b",
+                        "surface-dim": "#dbdad9",
+                        "inverse-on-surface": "#f2f0f0",
+                        "outline-variant": "#e0c0af",
+                        "background": "#fbf9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb68b",
+                        "on-secondary-container": "#67645d",
+                        "secondary-fixed-dim": "#cbc6bd",
+                        "secondary-container": "#e7e2d9",
+                        "on-tertiary-container": "#373737",
+                        "primary-container": "#ff7a00",
+                        "on-surface": "#1b1c1c",
+                        "surface": "#fbf9f9",
+                        "primary-fixed": "#ffdbc8",
+                        "secondary-fixed": "#e7e2d9",
+                        "surface-container-low": "#f5f3f3",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "tertiary": "#5f5e5e",
+                        "surface-variant": "#e3e2e2",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#494640",
+                        "surface-container-high": "#e9e8e7",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#5c2800",
+                        "primary": "#994700",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e3e2e2",
+                        "surface-container": "#efeded",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fbf9f9",
+                        "outline": "#8c7263",
+                        "secondary": "#615e57",
+                        "on-background": "#1b1c1c",
+                        "tertiary-container": "#a2a0a0",
+                        "on-primary-fixed-variant": "#753400",
+                        "on-primary-fixed": "#321200",
+                        "tertiary-fixed": "#e5e2e1",
+                        "inverse-surface": "#303031",
+                        "on-secondary-fixed": "#1d1b16",
+                        "on-surface-variant": "#584235",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#994700",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "48px",
+                        "stack-lg": "24px",
+                        "gutter": "16px",
+                        "stack-sm": "4px",
+                        "container-margin": "24px",
+                        "stack-md": "12px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 4px 20px rgba(26, 26, 26, 0.05);
+        }
+        .floating-accent {
+            filter: blur(60px);
+            z-index: -1;
+        }
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.2);
+        }
+        .tab-active {
+            color: #994700;
+            border-bottom: 2px solid #994700;
+        }
+        .tab-inactive {
+            color: #615e57;
+            opacity: 0.6;
+        }
+        .btn-press:active {
+            transform: scale(0.98);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen flex flex-col items-center justify-center p-container-margin relative overflow-hidden">
+<!-- Atmospheric Background Elements -->
+<div class="fixed inset-0 bg-gradient-to-br from-surface to-secondary-container opacity-50 z-[-2]"></div>
+<div class="absolute top-[10%] left-[15%] w-64 h-64 bg-primary-container/20 rounded-full floating-accent animate-pulse"></div>
+<div class="absolute bottom-[20%] right-[10%] w-80 h-80 bg-primary/10 rounded-full floating-accent" style="animation: pulse 8s infinite"></div>
+<!-- Main Container -->
+<main class="w-full max-w-[440px] z-10 flex flex-col items-center">
+<!-- Logo Branding -->
+<div class="mb-stack-lg flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg font-bold text-primary mb-stack-sm">TiffinKota</span>
+<p class="font-body-sm text-body-sm text-secondary">Premium Bistro Concierge</p>
+</div>
+<!-- Glassmorphic Auth Card -->
+<div class="glass-card w-full p-stack-lg rounded-xl">
+<!-- Tab Switcher -->
+<div class="flex border-b border-outline-variant mb-stack-lg">
+<button class="flex-1 py-stack-md font-label-caps text-label-caps tab-active transition-all" id="tab-customer" onclick="switchTab('customer')">
+                    Customer
+                </button>
+<button class="flex-1 py-stack-md font-label-caps text-label-caps tab-inactive transition-all" id="tab-partner" onclick="switchTab('partner')">
+                    Partner
+                </button>
+</div>
+<!-- Auth Form Content -->
+<div id="auth-content">
+<div class="flex flex-col gap-stack-md">
+<!-- Phone Input Group (Default) -->
+<div class="flex flex-col gap-stack-sm" id="phone-login-view">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Phone Number</label>
+<div class="flex gap-2">
+<div class="w-20 bg-surface border border-outline-variant rounded-lg px-3 py-3 font-body-lg text-body-lg flex items-center justify-between">
+<span>+91</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+<input class="flex-1 bg-surface border border-outline-variant rounded-lg px-4 py-3 font-body-lg text-body-lg focus:border-primary transition-colors" placeholder="Enter mobile number" type="tel"/>
+</div>
+</div>
+<!-- CTA Button -->
+<button class="w-full bg-primary-container hover:bg-primary text-white font-title-md text-title-md py-4 rounded-xl shadow-lg btn-press transition-all mt-stack-md">
+                        Get OTP
+                    </button>
+<!-- Divider -->
+<div class="relative py-stack-md flex items-center">
+<div class="flex-grow border-t border-outline-variant"></div>
+<span class="flex-shrink mx-4 font-label-caps text-label-caps text-secondary uppercase">Or connect with</span>
+<div class="flex-grow border-t border-outline-variant"></div>
+</div>
+<!-- Social/Alternative Options -->
+<div class="grid grid-cols-2 gap-stack-md">
+<button class="flex items-center justify-center gap-2 bg-surface border border-outline-variant rounded-lg py-3 hover:bg-surface-container-low transition-colors btn-press">
+<img alt="Google" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ69-dZMT_E36fs8G890mIdix9xEjLn9Am6AH64GHI-12qdqHwsDW7wq8JeeoD6S0wYt8IbkrlsdZBNU9hmeC42lQB-eeFk-WwVtK2YVlzPz--mgVN4KobsJIzXAKAeRT1OSD94tyckV_uabSGi4EPNSTAJMdlEkVWHl8olj_5opXYO_U7g7Ba2azlrS8NDSu2jNrDn1HWGL3i21yob7NrkEu6LUHBdwRfixj8HuFj3jfaQkidNXOKMwKGPmiOF4OcTTc7tbBriweo"/>
+<span class="font-label-caps text-label-caps">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 bg-surface border border-outline-variant rounded-lg py-3 hover:bg-surface-container-low transition-colors btn-press" onclick="toggleEmail()">
+<span class="material-symbols-outlined text-secondary text-[20px]">mail</span>
+<span class="font-label-caps text-label-caps">Email</span>
+</button>
+</div>
+<!-- Email Hidden Input (Revealed by JS) -->
+<div class="hidden flex flex-col gap-stack-sm mt-stack-md transition-all duration-300" id="email-login-view">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Email Address</label>
+<input class="bg-surface border border-outline-variant rounded-lg px-4 py-3 font-body-lg text-body-lg focus:border-primary transition-colors" placeholder="name@example.com" type="email"/>
+<button class="w-full bg-secondary-container text-on-secondary-container font-title-md text-title-md py-3 rounded-xl btn-press mt-2">
+                            Login with Email
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="mt-stack-lg text-center flex flex-col gap-2">
+<p class="font-body-sm text-body-sm text-secondary">
+                New to TiffinKota? 
+                <a class="text-primary font-semibold hover:underline" href="#">Create Account</a>
+</p>
+<p class="font-label-caps text-[10px] text-tertiary px-stack-lg mt-stack-sm">
+                By signing in, you agree to our <a class="underline" href="#">Terms of Service</a> and <a class="underline" href="#">Privacy Policy</a>.
+            </p>
+</div>
+</main>
+<!-- Side Decoration (Hidden on small screens) -->
+<div class="hidden lg:block fixed right-[-100px] top-1/2 -translate-y-1/2 opacity-20">
+<img class="w-[600px] h-auto object-cover rounded-full rotate-12" data-alt="A professional high-angle culinary shot of a stainless steel traditional tiffin carrier set against a warm, minimalist cream background. Soft, cinematic lighting highlights the polished texture of the containers, reflecting a premium bistro aesthetic. Subtle orange silk accents flow gracefully around the subject, creating a sense of dynamic gourmet motion and luxury food service quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_EdaGSJVCLiG-vU56g3iMxXEtYKFlkroehHHLQTPaYpUx3Slh9B87ufT-IQLBGC9ItINXg6ib5S5w2-zaUg4GiN3kNjSQdz7WuIqHpcu2ZmL9xYpK810kMZf3mTCFotGkiGPmBl2ul_2qhUV1P82R47o9d4T-jhbDgstrLgfy3eSaj0K1vbWoQQELwVlW41MwTOBu2k4iCRymEpMAr5eXvhYy-612TtU8q1sbnk3URdpIQ8HcJ-QG2GGCA0Xx2-GeE-PJA4-6C9Q-"/>
+</div>
+<script>
+        function switchTab(type) {
+            const customerTab = document.getElementById('tab-customer');
+            const partnerTab = document.getElementById('tab-partner');
+            
+            if (type === 'customer') {
+                customerTab.classList.remove('tab-inactive');
+                customerTab.classList.add('tab-active');
+                partnerTab.classList.remove('tab-active');
+                partnerTab.classList.add('tab-inactive');
+            } else {
+                partnerTab.classList.remove('tab-inactive');
+                partnerTab.classList.add('tab-active');
+                customerTab.classList.remove('tab-active');
+                customerTab.classList.add('tab-inactive');
+            }
+        }
+
+        function toggleEmail() {
+            const emailView = document.getElementById('email-login-view');
+            const phoneView = document.getElementById('phone-login-view');
+            
+            if (emailView.classList.contains('hidden')) {
+                emailView.classList.remove('hidden');
+                // Optional: scroll to it
+                emailView.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+                emailView.classList.add('hidden');
+            }
+        }
+
+        // Add subtle mouse-follow effect for the background blobs
+        document.addEventListener('mousemove', (e) => {
+            const accents = document.querySelectorAll('.floating-accent');
+            const x = (e.clientX / window.innerWidth) * 20;
+            const y = (e.clientY / window.innerHeight) * 20;
+            
+            accents.forEach((accent, index) => {
+                const multiplier = index === 0 ? 1 : -1;
+                accent.style.transform = `translate(${x * multiplier}px, ${y * multiplier}px)`;
+            });
+        });
+    </script>
+</body></html>

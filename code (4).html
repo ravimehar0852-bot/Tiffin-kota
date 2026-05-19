@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TiffinKota | Owner Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.5);
+        }
+        .status-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+        body {
+            background-color: #fbf9f9;
+            color: #1b1c1c;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "inverse-primary": "#ffb68b",
+                    "surface-dim": "#dbdad9",
+                    "inverse-on-surface": "#f2f0f0",
+                    "outline-variant": "#e0c0af",
+                    "background": "#fbf9f9",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb68b",
+                    "on-secondary-container": "#67645d",
+                    "secondary-fixed-dim": "#cbc6bd",
+                    "secondary-container": "#e7e2d9",
+                    "on-tertiary-container": "#373737",
+                    "primary-container": "#ff7a00",
+                    "on-surface": "#1b1c1c",
+                    "surface": "#fbf9f9",
+                    "primary-fixed": "#ffdbc8",
+                    "secondary-fixed": "#e7e2d9",
+                    "surface-container-low": "#f5f3f3",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "tertiary": "#5f5e5e",
+                    "surface-variant": "#e3e2e2",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#494640",
+                    "surface-container-high": "#e9e8e7",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#5c2800",
+                    "primary": "#994700",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e3e2e2",
+                    "surface-container": "#efeded",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#fbf9f9",
+                    "outline": "#8c7263",
+                    "secondary": "#615e57",
+                    "on-background": "#1b1c1c",
+                    "tertiary-container": "#a2a0a0",
+                    "on-primary-fixed-variant": "#753400",
+                    "on-primary-fixed": "#321200",
+                    "tertiary-fixed": "#e5e2e1",
+                    "inverse-surface": "#303031",
+                    "on-secondary-fixed": "#1d1b16",
+                    "on-surface-variant": "#584235",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#994700",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "48px",
+                    "stack-lg": "24px",
+                    "gutter": "16px",
+                    "stack-sm": "4px",
+                    "container-margin": "24px",
+                    "stack-md": "12px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "title-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 border-b border-white/20 bg-surface/80 backdrop-blur-xl shadow-sm">
+<div class="flex items-center justify-between px-container-margin py-stack-md w-full max-w-[1280px] mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary">Mama's Spice Kitchen</h1>
+<p class="font-label-caps text-label-caps text-secondary">Downtown Outlet</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-secondary-fixed-dim peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+<span class="ms-3 font-label-caps text-label-caps text-on-surface hidden md:block">SHOP OPEN</span>
+</label>
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity" data-icon="search">search</button>
+</div>
+</div>
+</header>
+<main class="mt-28 px-container-margin max-w-[1280px] mx-auto space-y-section-gap">
+<!-- Stats Summary Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+<div class="glass-card p-stack-lg rounded-xl shadow-[0px_4px_20px_rgba(26,26,26,0.05)] border-l-4 border-primary">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+<span class="text-green-600 font-label-caps text-label-caps bg-green-50 px-2 py-1 rounded">+12%</span>
+</div>
+<p class="font-label-caps text-label-caps text-secondary mb-1">ACTIVE SUBS</p>
+<h2 class="font-display-lg text-display-lg text-on-surface">148</h2>
+</div>
+<div class="glass-card p-stack-lg rounded-xl shadow-[0px_4px_20px_rgba(26,26,26,0.05)] border-l-4 border-primary-container">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="delivery_dining">delivery_dining</span>
+<span class="status-pulse inline-block w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<p class="font-label-caps text-label-caps text-secondary mb-1">TODAY'S DELIVERIES</p>
+<h2 class="font-display-lg text-display-lg text-on-surface">82</h2>
+</div>
+<div class="glass-card p-stack-lg rounded-xl shadow-[0px_4px_20px_rgba(26,26,26,0.05)] border-l-4 border-outline">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-outline" data-icon="payments">payments</span>
+<button class="text-primary font-label-caps text-label-caps hover:underline">View Analytics</button>
+</div>
+<p class="font-label-caps text-label-caps text-secondary mb-1">TOTAL EARNINGS</p>
+<h2 class="font-display-lg text-display-lg text-on-surface">₹42.5k</h2>
+</div>
+</section>
+<!-- Quick Actions -->
+<section>
+<h3 class="font-title-md text-title-md mb-stack-lg flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                Quick Operations
+            </h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<button class="flex flex-col items-center justify-center p-stack-lg glass-card rounded-xl hover:scale-95 transition-transform duration-200">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-primary" data-icon="restaurant_menu">restaurant_menu</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface">UPDATE MENU</span>
+</button>
+<button class="flex flex-col items-center justify-center p-stack-lg glass-card rounded-xl hover:scale-95 transition-transform duration-200">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-secondary" data-icon="campaign">campaign</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface">BROADCAST</span>
+</button>
+<button class="flex flex-col items-center justify-center p-stack-lg glass-card rounded-xl hover:scale-95 transition-transform duration-200">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-tertiary" data-icon="history">history</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface">HISTORY</span>
+</button>
+<button class="flex flex-col items-center justify-center p-stack-lg glass-card rounded-xl hover:scale-95 transition-transform duration-200">
+<div class="w-12 h-12 rounded-full bg-outline-variant flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="settings">settings</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface">SHOP SETTINGS</span>
+</button>
+</div>
+</section>
+<!-- Recent Orders -->
+<section class="space-y-gutter">
+<div class="flex justify-between items-end mb-stack-lg">
+<div>
+<h3 class="font-title-md text-title-md">Pending Approvals</h3>
+<p class="font-body-sm text-body-sm text-secondary">You have 4 orders waiting for response</p>
+</div>
+<button class="text-primary font-label-caps text-label-caps font-bold">SEE ALL</button>
+</div>
+<!-- Order List Card -->
+<div class="space-y-stack-md">
+<!-- Order Item 1 -->
+<div class="glass-card rounded-xl p-stack-lg flex flex-col md:flex-row md:items-center justify-between gap-stack-lg border border-transparent hover:border-primary-container transition-colors">
+<div class="flex items-center gap-gutter">
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+<img alt="Tiffin meal" class="w-full h-full object-cover" data-alt="A top-down professional food photograph of a vibrant Indian Tiffin meal featuring stainless steel containers filled with colorful curries, aromatic basmati rice, and fresh handmade rotis. The lighting is bright and warm, accentuating the rich oranges and yellows of the spices against a clean white bistro-style tabletop. The overall mood is appetizing, premium, and carefully curated for a modern culinary brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3n810t4Axz6vdP3R0VX1E_F66k7PaDlgd0wLRqz03p42Ubvzx-Ly1gXhQGRFUkRl0K8f3qmq5TbrgrJlytcAPOP0fiawThyX6pOQKQ2bawcGRS7orPch--RRex0hx8o24ae2kX6XH29PlA5BFHaNGUO4XunW3kQdHVgp8rhuiW5jEQX_abbhRwSPxgS0hCopZa_ux7yWkc2JcRCRx4bBXXIC7Olma5dB2VYiuXlNfr1bSPWKODMfA0YoKNXRuRWLtdloGiyULXOlY"/>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h4 class="font-title-md text-title-md">#TK-8892</h4>
+<span class="font-label-caps text-[10px] bg-primary-fixed text-on-primary-fixed-variant px-2 py-0.5 rounded-full">PREMIUM PLAN</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Rahul Sharma • 3 items • ₹450</p>
+<p class="font-label-caps text-label-caps text-primary mt-1">Requested delivery: 1:30 PM</p>
+</div>
+</div>
+<div class="flex gap-stack-md">
+<button class="flex-1 md:flex-none px-6 py-stack-md rounded-full bg-secondary-container text-on-secondary-container font-label-caps text-label-caps font-bold hover:bg-secondary-fixed transition-colors" onclick="this.closest('.glass-card').style.opacity='0.5'">REJECT</button>
+<button class="flex-1 md:flex-none px-8 py-stack-md rounded-full bg-primary-container text-white font-label-caps text-label-caps font-bold shadow-lg active:scale-95 transition-all" onclick="this.closest('.glass-card').classList.add('bg-green-50')">ACCEPT ORDER</button>
+</div>
+</div>
+<!-- Order Item 2 -->
+<div class="glass-card rounded-xl p-stack-lg flex flex-col md:flex-row md:items-center justify-between gap-stack-lg border border-transparent hover:border-primary-container transition-colors">
+<div class="flex items-center gap-gutter">
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+<img alt="Salad Bowl" class="w-full h-full object-cover" data-alt="A gourmet salad bowl presented with artistic flair, featuring mixed baby greens, heirloom cherry tomatoes, roasted seeds, and a light lemon vinaigrette. The scene is shot in a bright, airy kitchen setting with soft natural light streaming in, emphasizing freshness and high-end food quality. The style is minimalist and elegant, reflecting a concierge culinary experience with warm, professional tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSLoYw42_juiVKFhvzFLPiX5PRqsuTTjyLKPRdRAqJaSuOhMiVcn8_CJL2dzq5eEQj3bhQ_JHmrE9fglW8C-c2XW_7gMXBPSK1EKw7TPtD8FlYoQkgJnzxpQvYAOLV_mRe5keeVC__kBFy-on6bISOQ2wLdf3IUi3VboNNztpCQVa7au8KiYUo8K-RyxJRCMM8LUzkziBWUnsiWffBwupsgP6RTD4wL6OKErG9b3_tRJxlkSSwd5xWwJ4mFrC_kASHuKL5uceciSeH"/>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h4 class="font-title-md text-title-md">#TK-8895</h4>
+<span class="font-label-caps text-[10px] bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full">ONE-TIME ORDER</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Priya Verma • 1 item • ₹180</p>
+<p class="font-label-caps text-label-caps text-primary mt-1">Requested delivery: ASAP</p>
+</div>
+</div>
+<div class="flex gap-stack-md">
+<button class="flex-1 md:flex-none px-6 py-stack-md rounded-full bg-secondary-container text-on-secondary-container font-label-caps text-label-caps font-bold">REJECT</button>
+<button class="flex-1 md:flex-none px-8 py-stack-md rounded-full bg-primary-container text-white font-label-caps text-label-caps font-bold shadow-lg active:scale-95 transition-all">ACCEPT ORDER</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Earnings Visualization (Asymmetric Layout) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg">
+<div class="md:col-span-8 glass-card p-stack-lg rounded-xl">
+<div class="flex justify-between items-center mb-stack-lg">
+<h3 class="font-title-md text-title-md">Weekly Revenue</h3>
+<select class="bg-transparent border-none font-label-caps text-label-caps text-secondary focus:ring-0">
+<option>Last 7 Days</option>
+<option>Last 30 Days</option>
+</select>
+</div>
+<!-- Mock Chart -->
+<div class="h-64 flex items-end justify-between gap-2 px-2 pt-4">
+<div class="flex-1 bg-secondary-container rounded-t-lg h-[40%] hover:bg-primary-container transition-colors cursor-pointer group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100">₹4.2k</span>
+</div>
+<div class="flex-1 bg-secondary-container rounded-t-lg h-[65%] hover:bg-primary-container transition-colors cursor-pointer group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100">₹6.8k</span>
+</div>
+<div class="flex-1 bg-secondary-container rounded-t-lg h-[55%] hover:bg-primary-container transition-colors cursor-pointer group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100">₹5.9k</span>
+</div>
+<div class="flex-1 bg-primary-container rounded-t-lg h-[90%] group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded">₹9.2k</span>
+</div>
+<div class="flex-1 bg-secondary-container rounded-t-lg h-[70%] hover:bg-primary-container transition-colors cursor-pointer group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100">₹7.4k</span>
+</div>
+<div class="flex-1 bg-secondary-container rounded-t-lg h-[45%] hover:bg-primary-container transition-colors cursor-pointer group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100">₹4.8k</span>
+</div>
+<div class="flex-1 bg-secondary-container rounded-t-lg h-[60%] hover:bg-primary-container transition-colors cursor-pointer group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100">₹6.1k</span>
+</div>
+</div>
+<div class="flex justify-between mt-4 font-label-caps text-label-caps text-secondary opacity-60">
+<span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+</div>
+</div>
+<div class="md:col-span-4 space-y-gutter">
+<div class="glass-card p-stack-lg rounded-xl bg-primary text-white">
+<h4 class="font-label-caps text-label-caps opacity-80 mb-2">TOP PERFORMING DISH</h4>
+<p class="font-title-md text-title-md">Butter Chicken Tiffin</p>
+<p class="font-body-sm text-body-sm mt-2 opacity-90">Ordered by 42 people today</p>
+<div class="mt-4 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span class="font-label-caps text-label-caps">24% INCREASE</span>
+</div>
+</div>
+<div class="glass-card p-stack-lg rounded-xl border border-dashed border-outline-variant flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-2" data-icon="stars">stars</span>
+<p class="font-label-caps text-label-caps text-on-surface">REWARDS PROGRAM</p>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Engage more customers with discounts</p>
+<button class="mt-4 text-primary font-bold font-label-caps text-label-caps">SETUP NOW</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface/80 dark:bg-black/80 backdrop-blur-xl rounded-t-xl border-t border-white/20 shadow-lg">
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-caps text-label-caps">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary opacity-40 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="inventory">inventory</span>
+<span class="font-label-caps text-label-caps">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary opacity-40 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-label-caps text-label-caps">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary opacity-40 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-caps text-label-caps">Earnings</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('scale-95');
+            });
+        });
+
+        // Toggle Shop State
+        const shopToggle = document.querySelector('input[type="checkbox"]');
+        const statusText = document.querySelector('.ms-3.font-label-caps');
+        shopToggle.addEventListener('change', function() {
+            if(this.checked) {
+                statusText.innerText = 'SHOP OPEN';
+                statusText.classList.remove('text-error');
+                statusText.classList.add('text-on-surface');
+            } else {
+                statusText.innerText = 'SHOP CLOSED';
+                statusText.classList.add('text-error');
+                statusText.classList.remove('text-on-surface');
+            }
+        });
+    </script>
+</body></html>
